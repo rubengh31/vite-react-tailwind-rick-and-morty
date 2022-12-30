@@ -1,10 +1,10 @@
-export * from './Button'
-export * from './DetailCard'
-export * from './Image'
-export * from './Input'
-export * from './InputSearch'
-export * from './NavBar/Navbar'
-export * from './NavBar/components/Navigator'
-export * from './SearchTableContainer'
-export * from './SimpleCard'
-export * from './index'
+export { default as Button } from './Button';
+export { default as DetailCard } from './DetailCard';
+export { default as GenericInput } from './GenericInput';
+export { default as Image } from './Image';
+export { default as InputSearch } from './SearchInput';
+export { default as Navbar } from './NavBar/Navbar';
+export { default as Navigator } from './NavBar/components/Navigator';
+export { default as SearchTableContainer } from './SearchTableContainer';
+export { default as SimpleCard } from './SimpleCard';
+export { default as Table } from './Table';

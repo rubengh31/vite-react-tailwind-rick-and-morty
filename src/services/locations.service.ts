@@ -1,4 +1,4 @@
-import { Locations } from '@/models/locations.model'
+import { Locations } from './../models/locations.model';
 import axios from 'axios'
 const url: string = 'https://rickandmortyapi.com/api'
 

@@ -1,8 +1,8 @@
-import { Button } from '@components/Button'
-import { Image } from '@components/Image'
+import Button from './Button';
+import Image from './Image';
 
-export function SimpleCard (props: any) {
-  console.log(props)
+export default function SimpleCard(props: any) {
+  console.log(props);
   return (
     <>
       <div className="flex items-center justify-center mb-2">
@@ -10,11 +10,7 @@ export function SimpleCard (props: any) {
           <div className="flex flex-col space-y-2 divide-y">
             <div className="flex justify-between space-x-6 items-center p-2">
               <div className="flex items-center space-x-4">
-                <Image
-                  src={props.src}
-                  alt={props.name}
-                  className="rounded-full h-14 w-14"
-                />
+                <Image src={props.src} alt={props.name} className="rounded-full h-14 w-14" />
                 <div className="flex flex-col space-y-2">
                   <span className="text-sm">{props.name}</span>
                   <span className="text-xs">{props.gender}</span>
@@ -28,5 +24,5 @@ export function SimpleCard (props: any) {
         </div>
       </div>
     </>
-  )
+  );
 }

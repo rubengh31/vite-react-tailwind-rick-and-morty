@@ -1,36 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { getCharacters } from '@services/characters.service'
-import { SimpleCard } from '@components/SimpleCard'
+import { Fragment, useEffect, useState } from 'react';
+import { getCharacters } from '@/services/characters.service';
+import { SimpleCard } from '@/components';
 
-export function Characters () {
-  const [characters, setCharacters] = useState([] as any)
+export default function Characters() {
+  const [characters, setCharacters] = useState([] as any);
 
   const getFromServiceCharacters = async () => {
-    const { data } = await getCharacters()
-    setCharacters(data.results)
-  }
+    const { data } = await getCharacters();
+    setCharacters(data.results);
+  };
 
   const loadDataInCard = characters.map((element: any) => {
     return (
-      <React.Fragment key={element.id}>
-        <SimpleCard src={element.image} name={element.name} gender={element.gender}/>
-      </React.Fragment>
-    )
-  })
+      <Fragment key={element.id}>
+        <SimpleCard src={element.image} name={element.name} gender={element.gender} />
+      </Fragment>
+    );
+  });
 
   useEffect(() => {
     try {
-      getFromServiceCharacters()
+      getFromServiceCharacters();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }, [])
+  }, []);
 
   return (
     <>
-      <div className="mt-5">
-      {loadDataInCard}
-      </div>
+      <div className="mt-5">{loadDataInCard}</div>
     </>
-  )
+  );
 }

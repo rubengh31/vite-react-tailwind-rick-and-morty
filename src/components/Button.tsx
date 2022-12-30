@@ -1,4 +1,4 @@
-export function Button (props: any) {
+export default function Button(props: any) {
   return (
     <>
       <button
@@ -8,5 +8,5 @@ export function Button (props: any) {
         {props.text}
       </button>
     </>
-  )
+  );
 }

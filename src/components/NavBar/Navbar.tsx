@@ -1,8 +1,7 @@
-import { Navigator } from '..'
-import { Image } from '@components/Image'
-import logo from '@assets/images/logo.png'
+import { Navigator, Image } from '..';
+import logo from '../../assets/images/logo.png';
 
-export function Navbar () {
+export default function Navbar() {
   return (
     <>
       <header className="header">
@@ -10,5 +9,5 @@ export function Navbar () {
         <Navigator />
       </header>
     </>
-  )
+  );
 }

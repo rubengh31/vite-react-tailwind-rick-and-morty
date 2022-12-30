@@ -1,5 +1,3 @@
-export function Character () {
-  return (
-    <div>Character</div>
-  )
+export default function Character() {
+  return <div>Character</div>;
 }

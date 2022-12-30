@@ -1,39 +1,8 @@
-// {
-//   "compilerOptions": {
-//     "target": "ESNext",
-//     "baseUrl": "./src",
-//     "paths": { 
-//       "@components/*": ["app/components/*"],
-//      },
-//     "useDefineForClassFields": true,
-//     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-//     "allowJs": false,
-//     "skipLibCheck": false,
-//     "esModuleInterop": false,
-//     "allowSyntheticDefaultImports": true,
-//     "isolatedModules": true,
-//     "strict": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "module": "ESNext",
-//     "moduleResolution": "node",
-//     "resolveJsonModule": true,
-//     "noEmit": true,
-//     "jsx": "react-jsx",
-//     "types": ["node", "jest", "vite/client", "@testing-library/jest-dom"],
-//   },
-//   "include": ["./src"]
-// }
-
 {
   "compilerOptions": {
     "target": "ESNext",
-    "baseUrl": "./src",
-    "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
-      "@services/*": ["services/*"],
-      "@assets/*": ["assets/*"],
-    },
+    "baseUrl": ".",
+    "paths": { "@/*": ["./src/*"] },
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -48,7 +17,7 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node", "jest", "vite/client", "@testing-library/jest-dom"],
+    "types": ["node", "jest", "vite/client", "@testing-library/jest-dom"]
   },
   "include": ["./src"]
 }

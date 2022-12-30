@@ -1,7 +1,7 @@
-export * from './Character'
-export * from './Characters'
-export * from './Episode'
-export * from './Episodes'
-export * from './Location'
-export * from './Locations'
-export * from './NotFound'
+export { default as Character } from './Character';
+export { default as Characters } from './Characters';
+export { default as Episode } from './Episode';
+export { default as Episodes } from './Episodes';
+export { default as Location } from './Location';
+export { default as Locations } from './Locations';
+export { default as NotFound } from './NotFound';

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-export function Navigator () {
+export default function Navigator() {
   return (
     <>
       <ul className="main-nav">
@@ -21,5 +21,5 @@ export function Navigator () {
         </li>
       </ul>
     </>
-  )
+  );
 }

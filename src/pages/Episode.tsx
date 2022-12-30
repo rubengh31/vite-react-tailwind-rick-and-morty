@@ -1,5 +1,3 @@
-export function Episode () {
-  return (
-    <div>Episode</div>
-  )
+export default function Episode() {
+  return <div>Episode</div>;
 }

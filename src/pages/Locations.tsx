@@ -1,6 +1,3 @@
-export function Locations () {
-  return (
-    <></>
-
-  )
+export default function Locations() {
+  return <></>;
 }

@@ -1,6 +1,6 @@
-import { Input } from './Input'
+import GenericInput from './GenericInput';
 
-export function InputSearch () {
+export default function SearchInput() {
   return (
     <div className="pb-4 bg-white float-right">
       <div className="relative mt-1">
@@ -19,8 +19,8 @@ export function InputSearch () {
             ></path>
           </svg>
         </div>
-        <Input type="text" placeholder="Search for items"/>
+        <GenericInput type="text" placeholder="Search for items" />
       </div>
     </div>
-  )
+  );
 }

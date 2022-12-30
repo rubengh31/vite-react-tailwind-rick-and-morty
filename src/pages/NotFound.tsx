@@ -1,4 +1,3 @@
-
-export function NotFound () {
-  return <main>Not found</main>
+export default function NotFound() {
+  return <main>Not found</main>;
 }
