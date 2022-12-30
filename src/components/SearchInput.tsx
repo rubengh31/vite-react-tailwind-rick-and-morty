@@ -2,8 +2,8 @@ import GenericInput from './GenericInput';
 
 export default function SearchInput() {
   return (
-    <div className="pb-4 bg-white float-right">
-      <div className="relative mt-1">
+    <div className="mb-5 mt-2 mr-2 float-right">
+      <div className="relative">
         <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
           <svg
             className="w-5 h-5 text-gray-500 dark:text-gray-400"

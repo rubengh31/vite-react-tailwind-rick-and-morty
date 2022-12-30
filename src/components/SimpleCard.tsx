@@ -1,8 +1,6 @@
-import Button from './Button';
 import Image from './Image';
 
 export default function SimpleCard(props: any) {
-  console.log(props);
   return (
     <>
       <div className="flex items-center justify-center mb-2">
@@ -16,9 +14,7 @@ export default function SimpleCard(props: any) {
                   <span className="text-xs">{props.gender}</span>
                 </div>
               </div>
-              <div>
-                <Button text="Details" />
-              </div>
+              {props.children && <div>{props.children}</div>}
             </div>
           </div>
         </div>
