@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { getCharacters } from '@/services/characters.service';
-import { Button, DetailCard, SimpleCard } from '@/components';
+import { Button, SimpleCard } from '@/components';
 import { Link } from 'react-router-dom';
 
 export default function Characters() {
@@ -9,6 +9,11 @@ export default function Characters() {
   const getFromServiceCharacters = async () => {
     const { data } = await getCharacters();
     setCharacters(data.results);
+  };
+
+  const data = {
+    email: 'superman@gmail.com',
+    password: '123456'
   };
 
   const loadDataInCard = characters.map((element: any) => {

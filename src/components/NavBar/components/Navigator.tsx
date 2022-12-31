@@ -1,23 +1,41 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navigator() {
   return (
     <>
       <ul className="main-nav">
         <li>
-          <Link className="nav-option" to="/episodes">
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? '#1E429F' : '#6B7280' };
+            }}
+            className="nav-option"
+            to="/episodes"
+          >
             Episodes
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="nav-option" to="/characters">
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? '#1E429F' : '#6B7280' };
+            }}
+            className="nav-option"
+            to="/characters"
+          >
             Characters
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link className="nav-option" to="/locations">
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? '#1E429F' : '#6B7280' };
+            }}
+            className="nav-option"
+            to="/locations"
+          >
             Locations
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </>
