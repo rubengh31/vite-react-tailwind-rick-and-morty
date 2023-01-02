@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { getCharacters } from '@/services/characters.service';
-import { Button, SimpleCard } from '@/components';
+import { Button, SimpleCard, Image, Span } from '@/components';
 import { Link } from 'react-router-dom';
 
 export default function Characters() {
@@ -11,19 +11,25 @@ export default function Characters() {
     setCharacters(data.results);
   };
 
-  const data = {
-    email: 'superman@gmail.com',
-    password: '123456'
-  };
-
   const loadDataInCard = characters.map((element: any) => {
     return (
       <Fragment key={element.id}>
-        <SimpleCard id={element.id} src={element.image} name={element.name} gender={element.gender}>
-          <Link to={`/characters/${element.id}`} state={{ element }}>
-            <Button text="Details" />
-          </Link>
-        </SimpleCard>
+        <SimpleCard
+          image={<Image src={element.image} alt={element.name} className="rounded-full h-14 w-14" />}
+          span={
+            <>
+              <Span className="text-sm" text={element.name} />
+              <Span className="text-xs" text={element.gender} />
+            </>
+          }
+          button={
+            <>
+              <Link to={`/characters/${element.id}`} state={{ element }}>
+                <Button text="Details" />
+              </Link>
+            </>
+          }
+        />
       </Fragment>
     );
   });
@@ -34,6 +40,7 @@ export default function Characters() {
     } catch (error) {
       console.log(error);
     }
+    return () => {};
   }, []);
 
   return (

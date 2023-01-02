@@ -8,13 +8,10 @@ export default function SimpleCard(props: any) {
           <div className="flex flex-col space-y-2 divide-y">
             <div className="flex justify-between space-x-6 items-center p-2">
               <div className="flex items-center space-x-4">
-                <Image src={props.src} alt={props.name} className="rounded-full h-14 w-14" />
-                <div className="flex flex-col space-y-2">
-                  <span className="text-sm">{props.name}</span>
-                  <span className="text-xs">{props.gender}</span>
-                </div>
+                {props.image && <>{props.image}</>}
+                <div className="flex flex-col space-y-2">{props.span && <>{props.span}</>}</div>
               </div>
-              {props.children && <div>{props.children}</div>}
+              {props.button && <>{props.button}</>}
             </div>
           </div>
         </div>
