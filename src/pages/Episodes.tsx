@@ -10,6 +10,14 @@ export default function Episodes() {
     setEpisodes(data.results);
   };
 
+  useEffect(() => {
+    try {
+      getFromServiceEpisodes();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   const arrayColumns: string[] = ['Episode', 'Name', 'Characters', 'Created', 'Air date'];
   const columns = arrayColumns.map((element: string, i: number) => (
     <Fragment key={i}>
@@ -31,17 +39,5 @@ export default function Episodes() {
     </Fragment>
   ));
 
-  useEffect(() => {
-    try {
-      getFromServiceEpisodes();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
-  return (
-    <>
-      <Table listItems={listItems} columns={columns} hasSearch={true} />
-    </>
-  );
+  return <Table listItems={listItems} columns={columns} hasSearch={true} />;
 }

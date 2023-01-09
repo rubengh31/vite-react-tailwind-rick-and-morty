@@ -10,6 +10,16 @@ export default function Locations() {
     setLocations(data.results);
   };
 
+  useEffect(() => {
+    try {
+      getFromServiceLocations();
+    } catch (error) {
+      console.log(error);
+    }
+
+    return () => {};
+  }, []);
+
   const arrayColumns: string[] = ['Name', 'Dimension', 'Type', 'Residents', 'Created'];
   const columns = arrayColumns.map((element: string, i: number) => (
     <Fragment key={i}>
@@ -31,19 +41,5 @@ export default function Locations() {
     </Fragment>
   ));
 
-  useEffect(() => {
-    try {
-      getFromServiceLocations();
-    } catch (error) {
-      console.log(error);
-    }
-
-    return () => {};
-  }, []);
-
-  return (
-    <>
-      <Table listItems={listItems} columns={columns} hasSearch={true} />
-    </>
-  );
+  return <Table listItems={listItems} columns={columns} hasSearch={true} />;
 }

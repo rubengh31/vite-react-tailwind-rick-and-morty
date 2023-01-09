@@ -11,6 +11,13 @@ export default function Characters() {
     setCharacters(data.results);
   };
 
+  useEffect(() => {
+    try {
+      getFromServiceCharacters();
+    } catch (error) {}
+    return () => {};
+  }, []);
+
   const loadDataInCard = characters.map((element: any) => {
     return (
       <Fragment key={element.id}>
@@ -32,18 +39,5 @@ export default function Characters() {
     );
   });
 
-  useEffect(() => {
-    try {
-      getFromServiceCharacters();
-    } catch (error) {
-      console.log(error);
-    }
-    return () => {};
-  }, []);
-
-  return (
-    <>
-      <div className="mt-5">{loadDataInCard}</div>
-    </>
-  );
+  return <div className="mt-5">{loadDataInCard}</div>;
 }
