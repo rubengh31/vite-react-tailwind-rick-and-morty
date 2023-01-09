@@ -1,20 +1,31 @@
 import { Route, Routes } from 'react-router-dom';
 import { Navbar } from './components';
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState } from 'react';
 
 const Characters = lazy(() => import('./pages/Characters'));
 const Episodes = lazy(() => import('./pages/Episodes'));
 const Locations = lazy(() => import('./pages/Locations'));
 
-import './assets/styles/normalize.css';
 import { Character, LoginForm } from './pages';
 import Error404 from './pages/Error404';
 
+const initialTheme = 'light';
+
 function App() {
+  const [theme, setTheme] = useState(initialTheme);
+
+  const handleTheme = (e: any) => {
+    if (e.target.value === 'light') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  };
+
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
+        <Navbar theme={theme} handleTheme={handleTheme} />
         <Routes>
           <Route path="/" element={<LoginForm />}></Route>
           <Route path="/episodes" element={<Episodes />}></Route>

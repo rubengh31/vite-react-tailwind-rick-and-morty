@@ -1,0 +1,24 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: local("JetBrainsMono"),
+    url("./../fonts/JetBrainsMono-Medium.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  font-family: "JetBrainsMono";
+  margin: 0;
+  padding: 0;
+}
+
+/*****Themes***********/
+.dark {
+  background: white;
+  filter: invert(1);
+}
+
