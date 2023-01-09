@@ -1,5 +1,3 @@
-import Image from './Image';
-
 export default function SimpleCard(props: any) {
   return (
     <>
