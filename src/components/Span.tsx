@@ -1,7 +1,7 @@
-export default function Span(props: any) {
+export default function Span({ className = '', children }: any) {
   return (
     <>
-      <span className={props.className}>{props.text}</span>
+      <span className={className}>{children}</span>
     </>
   );
 }

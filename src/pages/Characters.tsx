@@ -14,25 +14,20 @@ export default function Characters() {
   const loadDataInCard = characters.map((element: any) => {
     return (
       <Fragment key={element.id}>
-        <SimpleCard
-          image={<Image src={element.image} alt={element.name} className="rounded-full h-14 w-14" />}
-          span={
-            <>
-              <Span className="text-sm" text={element.name} />
-              <Span className="text-xs" text={element.gender} />
-            </>
-          }
-          button={
-            <>
-              <Link to={`/characters/${element.id}`} state={{ element }}>
-                <Button
-                  text="Details"
-                  className="text-xs text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
-                />
-              </Link>
-            </>
-          }
-        />
+        <SimpleCard>
+          <div className="flex justify-between space-x-6 items-center p-2">
+            <div className="flex items-center space-x-4">
+              <Image src={element.image} alt={element.name} className="rounded-full h-14 w-14" />
+              <div className="flex flex-col space-y-2">
+                <Span className="text-sm">{element.name}</Span>
+                <Span className="text-xs">{element.gender}</Span>
+              </div>
+            </div>
+            <Link to={`/characters/${element.id}`} state={{ element }}>
+              <Button>Details</Button>
+            </Link>
+          </div>
+        </SimpleCard>
       </Fragment>
     );
   });

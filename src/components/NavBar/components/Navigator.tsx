@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from '../Navbar.module.scss';
 
-export default function Navigator(props: any) {
+export default function Navigator({ input }: any) {
   return (
     <>
       <ul className={styles.mainNav}>
@@ -39,7 +39,7 @@ export default function Navigator(props: any) {
           </NavLink>
         </li>
       </ul>
-      <div className="mr-3">{props.input}</div>
+      <div className="mr-3">{input}</div>
     </>
   );
 }

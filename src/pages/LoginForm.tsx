@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, GenericInput, Image, Form, Title } from '@/components';
+import { Button, GenericInput, Image, Form, Title, Span } from '@/components';
 import loginImage from '../assets/images/react.svg';
 import base64 from 'base-64';
 
@@ -77,14 +77,12 @@ export default function LoginForm() {
               </div>
 
               <div className="flex items-center justify-between">
-                {errorMessage && <span className="text-red-900 text-xs">{errorMessage}</span>}
+                {errorMessage && <Span className="text-red-900 text-xs">{errorMessage}</Span>}
               </div>
 
-              <Button
-                text="Sign in"
-                type="submit"
-                className="w-full text-white bg-blue-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-              />
+              <Button className="w-full text-white bg-blue-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                Sign in
+              </Button>
             </Form>
           </div>
         </div>
