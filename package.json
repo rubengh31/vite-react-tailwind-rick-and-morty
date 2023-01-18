@@ -11,7 +11,8 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",

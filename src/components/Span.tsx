@@ -1,7 +1,9 @@
-export default function Span({ className = '', children = null }: any) {
+export default function Span({ className = '', children = '' }: any) {
   return (
     <>
-      <span className={className}>{children}</span>
+      <span data-cy="span" className={className}>
+        {children}
+      </span>
     </>
   );
 }
