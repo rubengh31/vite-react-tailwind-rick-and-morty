@@ -1,9 +1,9 @@
 import { Navigator, Image, GenericInput } from '..';
-import logo from '../../assets/images/logo.png';
 import styles from './Navbar.module.scss';
+import logo from '@/assets/images/logo.png';
 
 export default function Navbar({ theme, handleTheme }: any) {
-  let input;
+  let input: any;
 
   if (theme === 'dark') {
     input = (
@@ -32,7 +32,7 @@ export default function Navbar({ theme, handleTheme }: any) {
   return (
     <>
       <header className={`${styles.header} ${theme}`}>
-        <Image src={logo} width={50} name="logo" />
+        <Image src={logo} width="50" alt="logo" />
         <Navigator input={input} />
       </header>
     </>

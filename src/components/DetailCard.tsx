@@ -12,7 +12,7 @@ export default function DetailCard(props: any) {
               <div className="bg-[url('https://i.imgur.com/DNVGE5B.png')] bg-repeat">
                 <div className="  mx-5 mt-2 flex justify-between items-center shadow-md border-2 px-2 pt-1 rounded-[2px] border-opacity-50  border-t-teal-50 border-l-teal-50  border-b-[#000000] border-r-[#000000]">
                   <Span className="font-Merriweather font-bold text-lg">{props.data.name}</Span>
-                  <Image src="/src/assets/images/react.svg" height="30" width="30" alt="react" />
+                  <Image src="/src/assets/images/react.svg" alt="react" />
                 </div>
                 <div className="mt-4 mx-auto rounded-[1px] ring-4 my-1 h-[260px] w-[260px] shadow-lg shadow-black ring-offset-0 ring-[#f9b798] ">
                   <Image className="object-fill" src={props.data.image} alt={props.data.name} />

@@ -1,4 +1,0 @@
-describe('Testing button'),
-  () => {
-    describe('');
-  };
