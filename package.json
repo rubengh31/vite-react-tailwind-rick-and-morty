@@ -49,6 +49,7 @@
     "@vitejs/plugin-react": "^3.0.1",
     "autoprefixer": "^10.4.13",
     "babel-jest": "^29.3.1",
+    "cypress": "^12.3.0",
     "eslint": "^8.32.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
@@ -68,5 +69,17 @@
     "vite": "^4.0.4",
     "vite-tsconfig-paths": "^4.0.3"
   },
-  "main": "babel.config.js"
+  "main": "babel.config.js",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
