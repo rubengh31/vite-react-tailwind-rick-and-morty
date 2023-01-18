@@ -1,4 +1,4 @@
-export default function Title({ type = 'h1', children, className = '' }: any) {
+export default function Title({ type = 'h1', children = undefined, className = '' }: any) {
   const titleToShow =
     type === 'h1' ? (
       <h1 className={className}>{children}</h1>

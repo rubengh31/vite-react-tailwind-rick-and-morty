@@ -1,23 +1,22 @@
+import { SimpleCard } from '@/components';
 import { cleanup, render } from '@testing-library/react';
-import { Span } from '@/components';
 
 const defaultProps = {
-  className: '',
-  children: null
+  children: undefined
 };
 
-describe('Span', () => {
+describe('SimpleCard', () => {
   let component: any;
 
   beforeEach(() => {
-    component = render(<Span {...defaultProps} />);
+    component = render(<SimpleCard {...defaultProps} />);
   });
 
   afterEach(() => {
     cleanup();
   });
 
-  it('Should render Span', async () => {
+  it('Should render SimpleCard correctly', async () => {
     expect(component).toBeTruthy();
   });
 });

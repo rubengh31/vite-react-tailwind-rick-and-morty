@@ -1,18 +1,27 @@
-export default function GenericInput(props: any) {
+export default function GenericInput({
+  name = undefined,
+  id = undefined,
+  className = undefined,
+  placeholder = undefined,
+  type = undefined,
+  value = undefined,
+  onClick = undefined,
+  onChange = undefined
+}: any) {
   return (
     <>
-      <label htmlFor={props.name} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-        {props.name}
+      <label htmlFor={name} className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        {name}
       </label>
       <input
-        name={props.name}
-        id={props.id}
-        className={props.className}
-        placeholder={props.placeholder}
-        type={props.type}
-        value={props.value}
-        onClick={props.onClick}
-        onChange={props.onChange}
+        name={name}
+        id={id}
+        className={className}
+        placeholder={placeholder}
+        type={type}
+        value={value}
+        onClick={onClick}
+        onChange={onChange}
       />
     </>
   );

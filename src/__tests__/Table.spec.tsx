@@ -1,23 +1,24 @@
 import { cleanup, render } from '@testing-library/react';
-import { Span } from '@/components';
+import { Table } from '@/components';
 
 const defaultProps = {
-  className: '',
-  children: null
+  listItems: undefined,
+  columns: undefined,
+  hasSearch: false
 };
 
-describe('Span', () => {
+describe('Table', () => {
   let component: any;
 
   beforeEach(() => {
-    component = render(<Span {...defaultProps} />);
+    component = render(<Table {...defaultProps} />);
   });
 
   afterEach(() => {
     cleanup();
   });
 
-  it('Should render Span', async () => {
+  it('Should render Table', async () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,23 +1,24 @@
+import { Title } from '@/components';
 import { cleanup, render } from '@testing-library/react';
-import { Span } from '@/components';
 
 const defaultProps = {
-  className: '',
-  children: null
+  type: 'h1',
+  children: undefined,
+  className: ''
 };
 
-describe('Span', () => {
+describe('Title', () => {
   let component: any;
 
   beforeEach(() => {
-    component = render(<Span {...defaultProps} />);
+    component = render(<Title {...defaultProps} />);
   });
 
   afterEach(() => {
     cleanup();
   });
 
-  it('Should render Span', async () => {
+  it('Should render Title correctly', async () => {
     expect(component).toBeTruthy();
   });
 });

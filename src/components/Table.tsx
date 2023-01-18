@@ -1,6 +1,6 @@
 import SearchInput from './SearchInput';
 
-function Table({ listItems, columns, hasSearch = false }: any) {
+function Table({ listItems = undefined, columns = undefined, hasSearch = false }: any) {
   return (
     <>
       {hasSearch && <SearchInput />}
